@@ -1,11 +1,9 @@
 package io.github.ridglef.walper;
 
-import io.github.ridglef.walper.commands.CommandExample;
 import io.github.ridglef.walper.hud.WalperHud;
-import io.github.ridglef.walper.modules.ModuleExample;
+import io.github.ridglef.walper.modules.WalperSpam;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
-import meteordevelopment.meteorclient.commands.Commands;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
@@ -18,8 +16,7 @@ public class Walper extends MeteorAddon {
     @Override
     public void onInitialize() {
         LOG.info("Walper Addon Started!");
-        Modules.get().add(new ModuleExample());
-        Commands.add(new CommandExample());
+        Modules.get().add(new WalperSpam());
         Hud.get().register(WalperHud.INFO);
     }
 

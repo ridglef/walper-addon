@@ -18,6 +18,6 @@ jobs:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: latest
           prerelease: true
-          title: Dev Build
+          title: Walper Addon 1.19.4
           files: |
             ./build/libs/*.jar

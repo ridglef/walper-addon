@@ -1,8 +1,10 @@
 {
   "required": true,
-  "package": "com.example.addon.mixin",
+  "package": "io.github.ridglef.walper.mixins",
   "compatibilityLevel": "JAVA_17",
-  "client": [],
+  "client": [
+    "WalperSplash"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

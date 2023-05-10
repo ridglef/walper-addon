@@ -27,7 +27,7 @@ public class WalperSpam extends Module {
     @EventHandler
     private void onTick(TickEvent.Pre event) {
         tick++;
-        if (count > 7) { //walpers av number (not known yet so im geussing 7)
+        if (count > 8) { //walpers fav interger
             tick = 0;
             count = 0;
             toggle();

@@ -1,34 +1,26 @@
-package com.example.addon;
+package io.github.ridglef.walper;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import io.github.ridglef.walper.commands.CommandExample;
+import io.github.ridglef.walper.hud.WalperHud;
+import io.github.ridglef.walper.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.commands.Commands;
 import meteordevelopment.meteorclient.systems.hud.Hud;
-import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.slf4j.Logger;
 
-public class Addon extends MeteorAddon {
+public class Walper extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Example");
-    public static final HudGroup HUD_GROUP = new HudGroup("Example");
+    public static final Category CATEGORY = new Category("Walper");
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Meteor Addon Template");
-
-        // Modules
+        LOG.info("Walper Addon Started!");
         Modules.get().add(new ModuleExample());
-
-        // Commands
         Commands.add(new CommandExample());
-
-        // HUD
-        Hud.get().register(HudExample.INFO);
+        Hud.get().register(WalperHud.INFO);
     }
 
     @Override
@@ -38,6 +30,6 @@ public class Addon extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "io.github.ridglef.walper";
     }
 }

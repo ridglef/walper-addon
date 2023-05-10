@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "walper-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "name": "Walper Addon",
+  "description": "all hail walper",
   "authors": [
-    "seasnail"
+    "Ridglef"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/ridglef/walper-addon"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/walper/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "io.github.ridglef.walper.Walper"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "walper.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25"
